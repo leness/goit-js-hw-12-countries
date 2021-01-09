@@ -12,12 +12,9 @@ function onInput(evt) {
     clearCountry();
     evt.preventDefault();
 
-    
-
     API.fetchCountry(input.value)
         .then(renderCountry)
         .catch(onFetchError)
-    
 }
 
 function renderedCountry(country) {
