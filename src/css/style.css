@@ -1,0 +1,36 @@
+body {
+  margin-top: 50px;
+  margin-left: 100px;
+}
+
+.requestCountry {
+  font-size: 30px;
+  margin-top: 40px;
+  margin-right: 200px;
+  margin-left: 200px;
+  padding: 10px;
+}
+
+.name {
+  font-size: 40px;
+}
+
+.capital {
+  font-size: 30px;
+}
+
+.population {
+  font-size: 30px;
+}
+
+.languages {
+  font-size: 30px;
+}
+
+.nativeName {
+  font-size: 25px;
+}
+
+.countryLink {
+  font-size: 25px;
+}
