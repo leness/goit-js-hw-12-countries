@@ -12,6 +12,10 @@ function onInput(evt) {
     clearCountry();
     evt.preventDefault();
 
+    if (!evt.target.value) {
+        return;
+    }
+
     API.fetchCountry(input.value)
         .then(renderCountry)
         .catch(onFetchError)
@@ -38,10 +42,11 @@ function clearCountry() {
 
 function renderCountry(country) {
     if (country.length > 10) {
-         renderedCountry(country)
        error({
   text: 'Too many matches found. Please enter a more specific query!'
        });
+    } else if (country.length > 1 && country.length < 11) {
+        renderedCountry(country)
     } else if (country.length === 1) {
         renderCountryCard(country)   
     }
